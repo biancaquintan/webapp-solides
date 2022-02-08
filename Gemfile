@@ -18,6 +18,11 @@ gem "puma", "~> 5.0"
 # Use devise to flexible authentication solution 
 gem 'devise'
 
+# Use bootstrap for application styles
+gem 'bootstrap', '~> 5.1.3'
+
+gem 'jquery-rails'
+
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
 
