@@ -1,24 +1,18 @@
-# README
+# README 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<h2>Dependências</h2>
+  Ruby 3.1.0
 
-Things you may want to cover:
+<h2>Pré-configuração</h2>
 
-* Ruby version
+  * bundle install 
 
-* System dependencies
+  * rails db:create db:migrate
 
-* Configuration
+<h2>Acessando</h2>
 
-* Database creation
+ run: rails s
+ enderço local disponível: http://localhost:3000 - aplicação
 
-* Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
