@@ -1,6 +1,25 @@
 <div class="container-fluid text-center">
-    <h1>WELCOME!!!</h1>
-    <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-        <%= link_to "LOGOUT", destroy_user_session_path(@user), method: "delete", class: "btn btn-danger" %>
-    </div>
+    <% if user_signed_in? %>
+        <h2>WELCOME, <%=current_user.email %> !!!</h2>     
+        <div class="card">
+            <div class="card-body">
+                The recorded information is monitored in real time, so always keep it up to date.
+            </div>
+        </div> 
+        <div>
+            <div class="btn-group p-3" role="group" aria-label="Basic mixed styles example">
+                <%= link_to "HISTORY", home_index_path, class: "btn btn-primary btn-lg" %>
+                <%= link_to "REGISTER TIME", home_index_path, class: "btn btn-warning btn-lg" %>
+                <%= link_to "LOGOUT", destroy_user_session_path(@user), method: "delete", class: "btn btn-danger btn-lg" %>
+            </div>
+        </div>
+    <% else %>
+        <h1>Time Register System</h1>
+        <img src="https://912784.smushcdn.com/2239677/wp-content/uploads/2020/07/Banco-de-Horas-com-Compensa%C3%A7%C3%A3o-da-Dom%C3%A9stica-como-funciona-1-768x486.jpg?lossy=1&strip=1&webp=1" alt="rss feed" width="30%" />
+        <div class="text-muted">
+            <%= link_to "LOGIN", new_user_session_path, class: "btn btn-sm btn-primary m-2" %>
+            <hr>
+            <small>Don't have an account? <%= link_to "SIGN UP", new_user_registration_path %> </small> 
+        </div>
+    <% end %>
 </div>
