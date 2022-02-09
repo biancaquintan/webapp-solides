@@ -11,8 +11,9 @@
 
 <h2>Acessando</h2>
 
- run: rails s
- enderço local disponível: http://localhost:3000 - aplicação
+Inicie o servidor com o seguinte comando: <i>rails </i>s
+ 
+ A aplicação estará disponível no enderço local: http://localhost:3000
 
 
 
