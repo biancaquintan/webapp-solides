@@ -1,9 +1,9 @@
 class RecordsController < ApplicationController
-  before_action :set_record, only: %i[ show edit update destroy ]
+  
 
   # GET /records or /records.json
   def index
-    @records = Record.all
+    @records = Record.where(user_id: current_user.id)
   end
 
   # GET /records/1 or /records/1.json

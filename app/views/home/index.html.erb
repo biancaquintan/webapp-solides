@@ -1,6 +1,6 @@
 <div class="container-fluid text-center">
     <% if user_signed_in? %>
-        <h2>WELCOME, <%=current_user.email %> !!!</h2>     
+        <h2>WELCOME, <%=current_user.name %> !!!</h2>     
         <div class="card">
             <div class="card-body">
                 The recorded information is monitored in real time, so always keep it up to date.
@@ -8,7 +8,7 @@
         </div> 
         <div>
             <div class="btn-group p-3" role="group" aria-label="Basic mixed styles example">
-                <%= link_to "HISTORY", home_index_path, class: "btn btn-primary btn-lg" %>
+                <%= link_to "HISTORY", records_path, class: "btn btn-primary btn-lg" %>
                 <% if @check_records.exists? %> 
                     <%= link_to "ATUALIZAR", edit_record_path(@current_record.id), class: "btn btn-warning btn-lg" %>
                 <% else %>
