@@ -1,0 +1,13 @@
+<div class="card text-center" style="width: 50%; margin: 0 auto">
+  <div class="card-header">
+    <h2>Editing record</h2>
+  </div>
+  <%= render "form", record: @record %>
+
+  <br>
+
+  <div>
+    <%= link_to "Show this record", @record %> |
+    <%= link_to "Back to records", records_path %>
+  </div>
+</div>
